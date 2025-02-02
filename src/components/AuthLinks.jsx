@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
 
 const AuthLinks = () => {
     const navigate = useNavigate();
@@ -15,18 +17,18 @@ const AuthLinks = () => {
     };
 
     return (
-        <div className="w-full p-4">
+        <div className="w-full p-4 bg-white rounded-lg">
             {isLoggedIn ? (
                 <>
                     <button
                         onClick={handleMinSida}
-                        className="w-full text-left p-2 rounded text-blue-600 hover:text-blue-800"
+                        className="w-full text-left p-2 rounded text-blue-800 hover:text-blue-800"
                     >
                         Min Sida
                     </button>
                     <button
                         onClick={handleLogout}
-                        className="w-full text-left p-2 rounded text-blue-600 hover:text-blue-800"
+                        className="w-full text-left p-2 rounded text-blue-800 hover:text-blue-800"
                     >
                         Logga ut
                     </button>
@@ -35,13 +37,13 @@ const AuthLinks = () => {
                 <>
                     <NavLink
                         to="/register"
-                        className="block w-full text-left p-2 rounded text-blue-600 hover:text-blue-800"
+                        className="block w-full text-left p-2 rounded text-blue-800 hover:text-blue-800"
                     >
                         Registrera dig
                     </NavLink>
                     <NavLink
                         to="/login"
-                        className="block w-full text-left p-2 rounded text-blue-600 hover:text-blue-800"
+                        className="block w-full text-left p-2 rounded text-blue-800 hover:text-blue-800"
                     >
                         Logga in
                     </NavLink>

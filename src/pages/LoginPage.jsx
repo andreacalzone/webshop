@@ -40,7 +40,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="flex items-center justify-center" style={{ height: 'calc(100vh - 90px)' }}>
       <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-md w-96">
         <h2 className="text-2xl font-semibold mb-6">Login</h2>
 
@@ -61,7 +61,7 @@ const LoginPage = () => {
 
         <div className="mb-6">
           <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-           Lösenord
+            Lösenord
           </label>
           <input
             type="password"
