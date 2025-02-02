@@ -7,6 +7,7 @@ const RegisterPage = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errors, setErrors] = useState({});
+  const [successMessage, setSuccessMessage] = useState(''); // State for success message
   const navigate = useNavigate();
 
   const validateForm = () => {
@@ -41,7 +42,7 @@ const RegisterPage = () => {
 
       // Save token to localStorage
       localStorage.setItem('token', response.data.token);
-      alert('Registration successful!');
+      setSuccessMessage('Registration successful!'); // Set success message
       navigate('/'); // Redirect to home or another page
     } catch (error) {
       console.error('Registration failed:', error.response?.data);
@@ -50,7 +51,7 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="flex items-center justify-center" style={{ height: 'calc(100vh - 90px)' }}>
       <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-md w-96">
         <h2 className="text-2xl font-semibold mb-6">Register</h2>
 
@@ -110,6 +111,9 @@ const RegisterPage = () => {
 
         {/* API Error Message */}
         {errors.api && <p className="text-red-500 text-sm mt-4">{errors.api}</p>}
+
+        {/* Success Message */}
+        {successMessage && <p className="text-green-500 text-sm mt-4">{successMessage}</p>}
       </form>
     </div>
   );

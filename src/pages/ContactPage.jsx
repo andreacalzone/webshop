@@ -108,7 +108,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="p-4 max-w-md mx-auto">
+    <div className="p-4 max-w-md mx-auto mt-20 bg-white rounded-lg">
       <h1 className="text-2xl font-semibold mb-4">Kontakta oss</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
