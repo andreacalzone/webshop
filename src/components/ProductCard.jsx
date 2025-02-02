@@ -7,7 +7,7 @@ const ProductCard = ({ product }) => {
       <div className="w-full h-48 flex items-center justify-center p-2">
         <img
           src={product.images[0]}
-          className="object-contain max-h-full w-full"
+          className="object-contain max-h-full w-full rounded-lg"
           alt={product.name}
         />
       </div>

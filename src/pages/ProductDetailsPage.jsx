@@ -64,7 +64,7 @@ const ProductDetailsPage = () => {
   }
 
   return (
-    <div className="mt-5">
+    <div className="mt-5 bg-white rounded-lg p-5">
       <div className="w-full max-w-md mx-auto aspect-square rounded-lg bg-white">
         <img
           src={product.images[0]}

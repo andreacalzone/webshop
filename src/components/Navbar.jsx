@@ -42,7 +42,7 @@ const Navbar = () => {
           </li>
           <li className="relative">
             {totalQuantity > 0 && (
-              <div className="text-xs z-10 w-5 h-5 bg-red-600 rounded-full absolute -right-1 -top-1 flex items-center justify-center text-white">
+              <div className="text-xs z-10 w-4 h-4 bg-red-600 rounded-full absolute -right-1 -top-1 flex items-center justify-center text-white pointer-events-none">
                 {totalQuantity}
               </div>
             )}
