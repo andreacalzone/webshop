@@ -16,9 +16,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="border-b h-20 bg-white shadow-md">
+    <nav className="h-20 bg-white shadow-md">
       <div className="px-6 container mx-auto flex items-center justify-between h-full">
-        {/* Logo and Spaceman Electronix */}
         <Link to="/" className="flex items-center gap-2 text-2xl font-bold">
           <IoLogoIonitron className="size-12 text-blue-600" />
           <span className="text-gray-800">Spaceman Electronix</span>
@@ -26,6 +25,11 @@ const Navbar = () => {
 
         {/* Produkter, Kontakt, and Shopping Cart */}
         <ul className="flex items-center gap-6 text-lg font-medium">
+        <li>
+            <NavLink to="/" className="hover:text-blue-600 font-bold">
+              Hem
+            </NavLink>
+          </li>
           <li>
             <NavLink to="/" className="hover:text-blue-600 font-bold">
               Produkter
