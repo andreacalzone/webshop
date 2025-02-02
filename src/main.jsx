@@ -9,6 +9,7 @@ import CheckoutPage from './pages/CheckoutPage'
 import ContactPage from './pages/ContactPage'
 import RegisterPage from './pages/RegisterPage'
 import LoginPage from './pages/LoginPage'
+import MinSida from './components/MinSida'
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
       path: "login",
       element: <LoginPage />
+      },
+      {
+      path: "min-sida",
+      element: <MinSida />
       }
   
   ]

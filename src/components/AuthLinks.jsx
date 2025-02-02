@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const AuthLinks = () => {
     const navigate = useNavigate();
@@ -10,15 +10,27 @@ const AuthLinks = () => {
         navigate("/login");
     };
 
+    const handleMinSida = () => {
+        navigate("/min-sida");
+    };
+
     return (
         <div className="w-full p-4">
             {isLoggedIn ? (
-                <button
-                    onClick={handleLogout}
-                    className="w-full text-left p-2 rounded text-blue-600 hover:text-blue-800"
-                >
-                    Logga ut
-                </button>
+                <>
+                    <button
+                        onClick={handleMinSida}
+                        className="w-full text-left p-2 rounded text-blue-600 hover:text-blue-800"
+                    >
+                        Min Sida
+                    </button>
+                    <button
+                        onClick={handleLogout}
+                        className="w-full text-left p-2 rounded text-blue-600 hover:text-blue-800"
+                    >
+                        Logga ut
+                    </button>
+                </>
             ) : (
                 <>
                     <NavLink

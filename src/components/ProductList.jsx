@@ -25,7 +25,6 @@ export const ProductList = ({ products }) => {
 
   return (
     <div className="flex gap-8">
-      {/* Sidebar and AuthLinks Container */}
       <div className="flex flex-col gap-4 w-64">
         <Sidebar
           categories={categories}
@@ -37,8 +36,8 @@ export const ProductList = ({ products }) => {
         <AuthLinks />
       </div>
 
-      {/* Product Grid */}
-      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 flex-1">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 flex-1">
         {sortedProducts.map((product) => (
           <ProductCard key={product._id} product={product} />
         ))}
